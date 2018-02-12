@@ -1,0 +1,58 @@
+{
+  "name": "biscuit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/biscuit.js",
+  "scripts": {
+    "precommit": "npm run lint",
+    "dev": "webpack --progress --colors --watch --env dev",
+    "build": "webpack --env dev && webpack --env build && npm run test",
+    "test": "jest",
+    "lint": "eslint --ext .ts src"
+  },
+  "jest": {
+    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "roots": [
+      "test"
+    ],
+    "collectCoverage": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Copyes/Biscuit.git"
+  },
+  "keywords": [
+    "cookie",
+    "webpack"
+  ],
+  "author": "lip.fan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Copyes/Biscuit/issues"
+  },
+  "homepage": "https://github.com/Copyes/Biscuit#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.17.0",
+    "eslint-loader": "^1.9.0",
+    "husky": "^0.14.3",
+    "jest": "^22.2.2",
+    "ts-jest": "^22.0.4",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.7.1",
+    "webpack": "^3.11.0",
+    "yargs": "^11.0.0"
+  }
+}
